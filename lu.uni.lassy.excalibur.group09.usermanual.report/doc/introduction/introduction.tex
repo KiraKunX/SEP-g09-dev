@@ -46,7 +46,7 @@ This document is meant to \ldots
 Description of the categories of persons targeted by this document together with the description of how they are expected to exploit the content of the document.
 
 
-\section{mysystemname}
+\section{HighwayToSafety}
 Brief overview of the software application domain and main purpose.
 
 
@@ -56,6 +56,96 @@ being them either humans (called end-users in the standard
 \cite{IEEE-2001-userdocumentation}) or not. For each actor, describe the main
 software functions that are offered to him. Structure of this sub-section MUST
 be by actor/functionalities.
+
+
+
+\subsubsection{Urgency Central}
+\subparagraph{Urgency Central Administrator}
+Most likely a chief or someone with high autorities in the Urgency Central. His
+job is to assign fellow colleagues as coordinators.
+
+\subparagraph{Urgency Central Coordinator}
+An Urgency Central Coordinator is an employee who has been given special rights
+by the administrator. His job is:
+
+\begin{enumerate}
+\item To confirm the notifier's situation.
+\item To register any useful information given by the notifier.
+\item To check the incident's location with the notifier.
+\item To submit the new event to the CMS when needed.
+\item To have an overview over the events in case the on-field workers are
+troubled or if they need more precise information on the dispatched teams.
+\end{enumerate}
+
+
+
+\subsubsection{Firemen}
+\subparagraph{Firemen Administrator}
+Most likely a chief or someone with high autorities in the Firemen Department.
+His job is to assign fellow colleagues as coordinators.
+
+\subparagraph{Firemen Coordinator}
+A Firemen Coordinator is a Team Leader who has been given special
+rights by the administrator. His job is:
+
+\begin{enumerate}
+\item To assemble his team as soon as possible when a dispatch request is
+received.
+\item To provide information on how long it takes to be on-site.
+\item To call for backup if needed when on-site.
+\item To eventually inform everyone (not just the Police) of any kind of
+emergencies related to the incident.
+\item To organise blockades of the highway and deviations.
+\item To alert the Towing Service to clear the highway of the crashed cars.
+\end{enumerate}
+
+\subsubsection{Police}
+\subparagraph{Police Administrator}
+Most likely a chief or someone with high autorities in the Police Department.
+His job is to assign fellow colleagues as coordinators.
+
+\subparagraph{Police Coordinator}
+A Police Coordinator is a Team Leader who has been given special
+rights by the administrator. His job is:
+
+\begin{enumerate}
+\item To assemble his team as soon as possible when a dispatch request is
+received.
+\item To provide information on how long it takes to be on-site.
+\item To call for backup if needed when on-site.
+\item To eventually inform everyone (not just the Police) of any kind
+of emergencies related to the incident.
+\end{enumerate}
+
+
+\subsubsection{Communication Company}
+A Communication Company is a company who provides fixed and mobile voice
+services like POST, TANGO, ORANGE, etc. Its job is to transfer any emergency
+calls to the urgency central for free and to provide the notifier's
+coordinates via its network to the system.
+
+\subsubsection{HighwayToSafety}
+HighwayToSafety is our crisis management system that includes following jobs to
+be done \emph{automatically} when needed :
+
+\begin{enumerate}
+\item To send a dispatch message to the corresponding Firemen Teams, Police
+Forces and/or Towing Service.
+\item To send a message to the News Company to broadcast the traffic jam that
+it will cause.
+\item To make sure the number of dispatched Teams corresponds to the number of
+Teams on its way or arrival (in case of unforeseen incident during a Team's
+way to the site).
+\item To calculate and display the breaking points of eventual deviations needed
+due to clean-up work.
+\end{enumerate}
+
+\subsubsection{Activator}
+An Activator is a logical representation of the active part of our CMS. It represents an
+implicit stakeholder belonging to the system’s environment that interacts with our
+CMS autonomously without the need of external entity. It is usually time triggered
+functionalities. Its job is to communicate the current time and date to the
+system everytime an operation's processed.
 
 
 \subsection{Operating environment}
