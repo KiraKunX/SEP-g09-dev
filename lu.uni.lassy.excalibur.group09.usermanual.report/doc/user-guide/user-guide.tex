@@ -57,40 +57,42 @@ different stages of the process while its is performed by the actor.
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
-\subsection{MyCommonProcedure1}
+\subsection{ugRegisterNewEvent}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] ugRegisterNewEvent
+\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
+\item [\textbf{Primary Actor}:] Human Witness Sara, Central Coordinator Tim
+\item [\textbf{Secondary Actor}:] Communication Company Orange
+\item [\textbf{Intention:}]The intention of the Human Witness is to inform the
+Urgency Central about an incident and the intention of the Ugency Central Coordinator is
+to add the new event to the system.
+\item [\textbf{Level}:]User-goal level
+\item [\textbf{Main~Success~Scenario}]:
+\begin{enumerate}
+\item Sara instructs the CMS that she wants to contact the Urgency
+Central.
+\item CMS sends Orange a message of Sara's request including her coordinates.
+\item Orange instructs the CMS that it wants to contact the Urgency Central.
+\item CMS informs Tim of the call including Sara's coordinates.
+\item Tim feeds the CMS with Sara's information.
+\item Tim submits the new event to the CMS.
+}
+\end{enumerate}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.3]{AddNewEventScreenShot.eps}
+\end{figure}
+
+\end{lyxlist}
 
 \subsection{MyCommonProcedure2}
 
 
-\section{Human}
+\section{My-Actor1 procedures}
 
-\subsection{ugProcedureAddEvent}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] ugProcedureNewEvent
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Human Witness Sara
-\item [\textbf{Secondary Actor}:] Central Coordinator Tim,\\
-                  Communication Company Orange
-\item [\textbf{Intention:}]The intention of the Coordinator is to add an new
-event to the system.
-\item [\textbf{Level}:]User-goal level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. \emph{Sara} notifies \emph{Orange} that she wants to contact the emergency
-central.\\
-2. \emph{Orange} puts \emph{Sara} into contact with \emph{Tim} including her
-location's information.\\
-3. \emph{Tim} confirms \emph{}{Sara}'s situation.\\
-4. \emph{Tim} submits the new event to the \emph{CMS}.\\
-}
-\end{lyxlist}
-
-%\begin{figure}[!ht]
-%\centering
-%\includegraphics[scale=0.5]{AddNewEventScreenShot.eps_tex}
-%\end{figure}
-
-
+\subsection{MyProcedure1}
 
 \subsection{MyProcedure2}
 

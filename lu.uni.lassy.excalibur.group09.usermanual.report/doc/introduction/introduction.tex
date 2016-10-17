@@ -60,7 +60,14 @@ by the administrator. His job is:
 \item To register any useful information given by the notifier.
 \item To check the incident's location with the notifier.
 \item To submit the new event to the CMS when needed.
-\item To have an overview over the events in case the on-field workers are
+\item To send a dispatch message including the incident's location to the
+incident's nearest Police Teams, Firemen Teams and/or Towing Service Vehicles.
+\item To send a message to the News Company including the incident's location to
+broadcast the traffic jam that it will cause.
+\item To make sure the number of any requested Teams matches the number of Teams
+on its way and/or on-site. If overloaded, than make sure as many as possible are
+dispatched.
+\item To have an overview over the events in case the on-site workers are
 troubled or if they need more precise information on the dispatched teams.
 \end{enumerate}
 
@@ -111,21 +118,6 @@ services like POST, TANGO, ORANGE, etc. Its job is to transfer any emergency
 calls to the urgency central for free and to provide the notifier's
 coordinates via its network to the system.
 
-\subsubsection{HighwayToSafety}
-HighwayToSafety is our crisis management system that includes following jobs to
-be done \emph{automatically} when needed :
-
-\begin{enumerate}
-\item To send a dispatch message to the corresponding Firemen Teams, Police
-Forces and/or Towing Service.
-\item To send a message to the News Company to broadcast the traffic jam that
-it will cause.
-\item To make sure the number of dispatched Teams corresponds to the number of
-Teams on its way or arrival (in case of unforeseen incident during a Team's
-way to the site).
-\item To calculate and display the breaking points of eventual deviations needed
-due to clean-up work.
-\end{enumerate}
 
 \subsubsection{Activator}
 An Activator is a logical representation of the active part of our CMS. It represents an
