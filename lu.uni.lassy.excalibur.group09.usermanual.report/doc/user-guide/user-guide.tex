@@ -59,6 +59,50 @@ different stages of the process while its is performed by the actor.
 Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
+\subsection{suGlobalManagementOfEvent}
+\begin{lyxlist}{UC1}
+\small{
+\item [\textbf{Use~Case:}] suGlobalManagementOfEvent
+\item [\textbf{Scope:}] Enterprise level
+\item [\textbf{Primary Actor}:] Walter: Human Witness,\\ 
+						        Camille: Central Coordinator,\\
+								Fabio: Firemen Coordinator,\\
+								Ted: Tow-truck driver,\\ 
+								Polo: Police Coordinator
+\item [\textbf{Secondary Actor}:] Orange: Communication Company
+\item [\textbf{Intention:}] The intention of this procedure is to have a new
+event\\ registered into the system and have all the required resources\\ arrive
+at the accident’s location.
+\item [\textbf{Level}:] Summary level
+\item [\textbf{Main~Success~Scenario}]:
+\begin{enumerate}
+  \item Walter contacts Camille at the Emergency Central.
+  \item Camille instructs the CMS to request Walter’s coordinates from Orange.
+  \item Orange asks CMS to receives Walter’s coordinates.
+  \item Camille receives Walter’s coordinates from CMS.
+  \item Camille fills in the information provided by Walter.
+  \item Camille creates a new event associated to Walter (CrisisID, Name,
+  HumanType, PhoneNumber, CrisisEventLocation).
+  \item CMS sends a request to dispatch a team to the nearest, available Firemen
+  Coordinator Fabio.
+  \item CMS sends a request to dispatch a tow-truck to the nearest, available
+  Tow-truck driver Ted.
+  \item Fabio informs the CMS that his team is on its way to the accident’s
+  location.
+  \item Ted informs the CMS that he is on his way to the accident’s location.
+  \item Fabio informs the CMS that his team has arrived at the accident’s
+  location.
+  \item Fabio informs the CMS that they require a Police Team.
+  \item CMS sends a request to dispatch a team to the Police Coordinator Polo.
+  \item Polo informs the CMS that his team is on its way to the accidents
+  location.
+  \item Ted informs the CMS that he has arrived at the accident’s location.
+  \item Polo informs the CMS that his team has arrived at the accident’s
+  location.
+\end{enumerate}
+}  
+\end{lyxlist}
+
 \subsection{ugRegisterNewEvent}
 \begin{lyxlist}{UC1}
 \small{
@@ -79,8 +123,8 @@ Central.
 \item CMS informs Tim of the call including Sara's coordinates.
 \item Tim feeds the CMS with Sara's information.
 \item Tim submits the new event to the CMS.
-}
 \end{enumerate}
+}
 
 \begin{figure}[!ht]
 \centering
