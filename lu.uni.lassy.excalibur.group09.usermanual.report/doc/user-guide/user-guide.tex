@@ -60,6 +60,7 @@ Common procedures to several actors are grouped in this section to avoid
 redundancy.
 
 \subsection{suGlobalManagementOfEvent}
+
 \begin{lyxlist}{UC1}
 \small{
 \item [\textbf{Use~Case:}] suGlobalManagementOfEvent
@@ -76,65 +77,71 @@ at the accident’s location.
 \item [\textbf{Level}:] Summary level
 \item [\textbf{Main~Success~Scenario}]:
 \begin{enumerate}
-  \item Walter contacts Camille at the Emergency Central.
-  \item Camille sends to CMS to request Walter’s coordinates from Orange.
-  \item Orange sends to CMS to receives Walter’s coordinates.
-  \item Camille sends to CMS to receive Walter’s coordinates.
-  \item Camille fills in the information provided by Walter.
-  \item Camille sends to CMS to create a new event associated to Walter
-  (1,Walter, Witness, 691123456, http://..., X=75.08,Y=23.03, ``No additional 
-  comments'').
-  \item CMS sends a request to dispatch a team to the nearest, available Firemen
+  \item Walter contacts by phone Camille at the Emergency Central.
+  \item Camille sends a message to HTS(i.e. Highway to Safety) to request
+  coordinates of Walter's phone number 00352 691 12 34 56.
+  \item HTS sends a message to Orange to receive the coordinates of the user
+  with phone number 00352 691 12 34 56.
+  \item Orange sends coordinates of phone number 00352 661 123 123 to HTS.
+  \item HTS sends Walter's coordinates to Camille.
+  \item Camille asks the system to create a new event associated to the crisis
+  with the following information:
+  \begin{enumerate}
+  \item Walter (name)
+  \item Witness (actor type)
+  \item ``Highway carcrash with two cars involved'' (comment)
+  \end{enumerate}
+  \item HTS creates the new event with the information given by Camille and
+  generates a new crisisID:1 to the event.
+  \item HTS adds phone number and coordinates of phone number to the event 1.
+  \item HTS sends a request to dispatch a team to the nearest, available Firemen
   Coordinator Fabio.
-  \item CMS sends a request to dispatch a tow-truck to the nearest, available
+  \item HTS sends a request to dispatch a tow-truck to the nearest, available
   Tow-truck driver Ted.
-  \item Fabio sends to CMS that his team is on its way to the accident’s
+  \item Fabio sends a message to HTS that his team is on its way to the
+  accident’s location.
+  \item Ted sends a message to HTS to refresh the map.
+  \item Ted sends a message to HTS (``I will arrive in 30 minutes'').
+  \item Ted sends a message to HTS that he is on his way to the accident’s
   location.
-  \item Ted sends to CMS to refresh the map.
-  \item Ted sends message to the CMS (``I will arrive in 30 minutes'').
-  \item Ted sends to CMS that he is on his way to the accident’s location.
-  \item Fabio sends to CMS that his team has arrived at the accident’s
+  \item Fabio sends a message to HTS that his team has arrived at the accident’s
   location.
-  \item Fabio sends to CMS that they require a Police Team.
-  \item CMS sends a request to dispatch a team to the Police Coordinator Polo.
-  \item Polo sends to CMS that his team is on its way to the accidents
+  \item Fabio sends a message to HTS that they require a Police Team.
+  \item HTS sends a request to dispatch a team to the Police Coordinator Polo.
+  \item Polo sends to HTS that his team is on its way to the accidents
   location.
-  \item Ted sends to CMS that he has arrived at the accident’s location.
-  \item Polo sends to CMS that his team has arrived at the accident’s
+  \item Ted sends a message to HTS that he has arrived at the accident’s
   location.
-\end{enumerate}
-}  
-\end{lyxlist}
-
-\subsection{ugRegisterNewEvent}
-\begin{lyxlist}{UC1}
-\small{
-\item [\textbf{Use~Case:}] ugRegisterNewEvent
-\item [\textbf{Scope:}] Crisis Management System (\emph{CMS})
-\item [\textbf{Primary Actor}:] Human Witness Sara, Central Coordinator Tim
-\item [\textbf{Secondary Actor}:] Communication Company Orange
-\item [\textbf{Intention:}]The intention of the Human Witness is to inform the
-Urgency Central about an incident and the intention of the Ugency Central Coordinator is
-to add the new event to the system.
-\item [\textbf{Level}:]User-goal level
-\item [\textbf{Main~Success~Scenario}]:
-\begin{enumerate}
-\item Sara instructs the CMS that she wants to contact the Urgency
-Central.
-\item CMS sends Orange a message of Sara's request including her coordinates.
-\item Orange instructs the CMS that it wants to contact the Urgency Central.
-\item CMS informs Tim of the call including Sara's coordinates.
-\item Tim feeds the CMS with Sara's information.
-\item Tim submits the new event to the CMS.
+  \item Polo sends a message to HTS that his team has arrived at the accident’s
+  location.
 \end{enumerate}
 }
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.3]{AddNewEventScreenShot.eps}
-\end{figure}
-
 \end{lyxlist}
+
+
+
+\begin{minipage}{0.7\textwidth}
+\begin{figure}[H]
+\includegraphics[width=1.0\textwidth]{GetLocation.eps}
+\end{figure}
+\end{minipage} \hfill
+\begin{minipage}{0.25\textwidth}
+\begin{itemize}
+\item 1.By pressing the ``Get Location'' button the user asks the system to get the
+location of the phone number of the witness.
+\item 2. These fields are filled by the Central Coordinator with the corresponding
+information.
+\end{itemize}
+\end{minipage}
+
+
+
+ 
+
+
+
+
+
 
 \subsection{MyCommonProcedure2}
 
