@@ -10,37 +10,51 @@ Group the operations devoted to the needs of specific actors. Common
 operations to several actors may be grouped and presented once to avoid redundancy.
 
 
-\section{MyOperation}
+\section{Create a new crisis event}
 \label{operation:MyOperation}
-The system operator creates and adds a new crisis to the system after being
-informed by a third party (citizen, organization) and selects a crisis handler for the crisis.
+The central coordinator creates and adds a new crisis event to the system after
+being informed by a third party (citizen, organization).
 
 \begin{description}
 
-\item \textbf{Parameters:} Reporter Personal Information, Crisis Information, Crisis Handler
-\item \textbf{Precondition:} The system operator is logged in and has received information from a reporter.
-\item \textbf{Post-condition:} A new crisis has been added to the system and the new crisis has been assigned to a crisis handler, the Handler has received an automatic notification from the system.
-\item \textbf{Output messages:} The selected Crisis Handler will be notified
-automatically once the crisis has been created.
+\item \textbf{Parameters:} Information of Witness, Crisis Information, Fireman
+Coordinator.
+\item \textbf{Precondition:} The central coordinator is logged in and has
+received information from a witness.
+\item \textbf{Post-condition:} A new crisis has been added to the system and the
+new crisis has automatically been assigned to a fireman coordinator, who has
+received an automatic notification from the system.
+\item \textbf{Output messages:}\begin{enumerate}\item The selected fireman
+coordinator will be notified automatically once the crisis has been created.
+\item A new crisis with the corresponding information will be added to the
+central coordinator's graphical user interface.
+\end{enumerate}
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item From within the crisis management window fill out the required entries related to the personal information of the reporter such as name and phone number.
-\item Fill out the entries related to the crisis type, impacted area, priority, description, GPS coordinates, address and finally choose a Crisis Handler from the combo box.
-\item Click on the “Submit” button in and add the entry to the database.
+\item From within the crisis management window fill out the required entries
+related to the personal information of the witness such as name and actor type.
+\item Fill out the comment entry related to the crisis.
+\item Click the “Get Location” button.
+\item Click on the “Confirm Location” button, then click on the “Submit”
+button and add the entry to the database.
 \end{enumerate}
 
  
 \end{description}
 
  
-\subsection{MyExample1}
-Examples should illustrate the use of \textbf{complex operations}.
-
-Each example must show how the actor uses the software operation under
-description to achieve (at least one of) its expected outcome.
-
-It might be required to include GUI screenshots to illustrate the example.
-
+\subsection{Create a new crisis event example}
+To create a new crisis event, the central coordinator clicks on the “Add Event”
+button. A new window appears, where the central coordinator fills in all the
+provided information of the witness. Then the central coordinator clicks on the
+“Get Location” button to tell the system to get the gps coordinates of the phone
+number of the witness. Then, after oraly checking with the witness that the gps
+coordinates are correct, the central coordinator clicks on “Confirm Location”.
+Finally the central coordinator can submit the new crisis event and add it to
+the database by clicking on the “Submit” button. After the successfull creation
+of a new crisis event, the event is shown in the graphical user interface of the
+central coordinator and the nearest fireman coordinator to the gps coordinates
+is notified.
 
 
