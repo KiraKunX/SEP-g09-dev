@@ -2,14 +2,6 @@
 \label{chap:soptware_operations}
 
 
-Explain each allowed software operations (i.e. an atomic unit of treatment, a service, a functionality) including a brief description of the operation, required parameters, optional parameters, default options, required steps to trigger the operation, assumptions upon request of the operation and expected results of executing such operation.
-Describe how to recognise that the operation has successfully been executed or
-abnormally terminated. The template given below (i.e. section \ref{operation:MyOperation} has to be used).
-
-Group the operations devoted to the needs of specific actors. Common
-operations to several actors may be grouped and presented once to avoid redundancy.
-
-
 \section{Create a new crisis event}
 \label{operation:MyOperation}
 The central coordinator creates and adds a new crisis event to the system after
@@ -51,7 +43,7 @@ in all the provided information of the witness (see Fig. 3.1). Then the central
 coordinator clicks on the “Get Location” button to tell the system to get the gps coordinates of the phone
 number of the witness (see Fig. 3.1). Then, after oraly checking with the
 witness that the gps coordinates are correct, the central coordinator clicks on
-“Confirm Location” button.
+the “Confirm Location” button.
 Finally the central coordinator can submit the new crisis event and add it to
 the database by clicking on the “Submit” button. After the successfull creation
 of a new crisis event, the event is shown in the graphical user interface of the
@@ -70,3 +62,119 @@ gps coordinates is notified.
 \includegraphics[width=0.9\textwidth]{Active_events.eps}
 \end{figure}
 \end{minipage}
+
+
+
+\section{Send a message to the Emergency Central}
+\label{operation:MyOperation}
+The fireman coordinator writes a message and then sends it to the central
+coordinator, either by typing in text or by using the preprogrammed macros.
+
+\begin{description}
+
+\item \textbf{Parameters:} Typed-in text, Quantity of assistance.
+\item \textbf{Precondition:} The fireman coordinator is logged into the Ipad
+app.
+\item \textbf{Post-condition:} A new message has been send to the central
+coordinator. 
+\item \textbf{Output messages:}
+\begin{enumerate}
+  \item The fireman coordinator sees in the chat log that the message went out.
+  \item The message displays in the GUI of the central coordinator.
+\end{enumerate}
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+  \item From the main menu of the Ipad App click on the “Chat” button.
+  \item In the chat window, you can choose rather to use the preprogrammed
+  macros or to type in text manually.
+  \item To use the macros you have to choose what kind of assistance you need
+  (Ambulance, Police, Firetruck) and select the quantity you need, then you
+  press the button with the wished assistance.
+  \item To write customized messages, you can use the input field which says
+  “write here\ldots”.
+\end{enumerate}
+\end{description}
+
+ 
+\subsection{Send a message to the Emergency Central example}
+To send a message to the central coordinator, the fireman coordinator clicks on
+the “Chat” button to enter the chat window (see Fig. 4.3). If the message, the
+fireman coordinator wants to send, corresponds to one of the makros, he should
+use it and choose the quantity of help, by clicking the plus or minus
+buttons(see Fig. 4.4).
+If the fireman coordinator needs to send a message that is not
+covered by one of the makros he should write the text into the input field and
+then send it. After the successfull sending of the message, the message
+appears in the chat log of the fireman coordinator and on the GUI of the central
+coordinator under the “Messages” window.
+
+\begin{minipage}{1.0\textwidth}
+\begin{figure}[H]
+\caption{Main menu of Ipad app}
+\includegraphics[width=0.9\textwidth]{IpadAppHome.eps}
+\end{figure}
+\end{minipage}
+
+\section{Update Status on Ipad Application}
+\label{operation:MyOperation}
+The coordinator, who uses the Ipad, updates his status to inform the system if
+his team is stil in “Staion”, “In transit” or already “Arrived”
+
+\begin{description}
+
+\item \textbf{Parameters:} Status input.
+\item \textbf{Precondition:} The coordinator's Team is in a certain status and
+the coordinator is logged into the Ipad app.
+\item \textbf{Post-condition:} The coordinator's Team is in another status then
+in the Precondition.
+\item \textbf{Output messages:} The central coordinator of the emergency central
+receives a message that the status of the coordinator's team has been updated in
+the system and the changes are displayed in his GUI.
+
+\item \textbf{Triggering:} 
+\begin{enumerate}
+  \item From the main menu of the Ipad App click on the “Map” button.
+  \item In the map window click on the menu underneath the “Status:” label and
+  select the status you want to update to.
+\end{enumerate}
+\end{description}
+
+ 
+\subsection{Update Status on Ipad Application example}
+In the main menu of the Ipad app, the coordinator of a team clicks on the “Map”
+button to open the map window. In the map window the user clicks on the menu underneath the
+“Status:” label and selects the status “Arrived” to tell the system that the
+team has arrived on the accidesnt's location.
+
+\section{Update Map on Ipad Application}
+\label{operation:MyOperation}
+The coordinator, who uses the Ipad, updates the map to get the newest
+information on his map, like traffic information, accident location information or location
+of other parties like ambulance, tow-truck, police.
+
+\begin{description}
+
+\item \textbf{Parameters:} 
+\item \textbf{Precondition:} The Ipad user is on the “Map” window of
+the Ipad app.
+\item \textbf{Post-condition:} The map is updated and shows all the new
+information.
+\item \textbf{Output messages:} The map of the “Map” window changes.
+
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+  \item From the main menu of the Ipad App click on the “Map” button.
+  \item Click on the “Update” button.
+\end{enumerate}
+ 
+
+\end{description}
+
+ 
+\subsection{Update Map on Ipad Application example}
+In the main menu of the Ipad app, the user clicks on the “Map” button to open
+the map window. In the map window the user clicks on the “Update” button to
+update the map. After a few seconds the updated map is displayed and all the
+newest information is shown.
