@@ -2,7 +2,7 @@
 \label{chap:introduction}
 
 \section{Scope}
-This User Manual explains how to install, configure and use HighwayToSafety. The
+This User Manual explains how to use HighwayToSafety. The
 instructions here apply to version 1.0 of HighwayToSafety.
 This document does not provide any information on how to perform changes like
 adding functionalities. It is not intended to provide information about
@@ -22,8 +22,8 @@ downloadable on our website www.uni.lu/highwaytosafety/support.
 % and run.
 \section{Purpose}
 This document provides information on when and how to use our software. It
-describes the operation and performance of the HighwayToSafety software as used
-by emergency offices and their associates.
+describes the operations and performances of the HighwayToSafety software as
+used by emergency offices and their associates.
 \section{Intended audience}
 This document is intended to serve as a guide for every user of the
 HighwayToSafety software. It is used by different kinds of administrators, who
@@ -44,71 +44,67 @@ accident, and their colleagues who work at the emergency centrals.
 In this section, you will find an overview of all the
 \textbf{\emph{\glspl{actor}}} interacting with the software. The structure of
 this section is such that for each actor, you will find a short introduction
-followed by the main software functions that are offered to him.
+followed by the main software functions that are offered to them.
 
 \subsubsection{Emergency Central}
-\subparagraph{Emergency Central Administrator}
-Most likely a chief or someone with high autorities in the Emergency Central. His
-job is to assign fellow colleagues as coordinators.
 
 \subparagraph{Emergency Central Coordinator}
-An Emergency Central Coordinator is an employee who has been given special rights
-by the administrator. His job is:
+An Emergency Central Coordinator is an employee who has special rights. 
+His job is:
 
 \begin{enumerate}
 \item To confirm the notifier's situation.
 \item To register any useful information given by the notifier.
 \item To check the incident's location with the notifier.
-\item To submit the new event to the CMS when needed.
-\item To send a dispatch message including the incident's location to the
-incident's nearest Police Teams, Firemen Teams and/or Towing Service Vehicles.
-\item To send a message to the News Company including the incident's location to
-broadcast the traffic jam that it will cause.
-\item To make sure the number of any requested Teams matches the number of Teams
-on its way and/or on-site. If overloaded, than make sure as many as possible are
-dispatched.
-\item To have an overview over the events in case the on-site workers are
-troubled or if they need more precise information on the dispatched teams.
+\item To submit the new event to HTS and thus initiating the whole rescue
+mission.
+\item To make sure that the number of requested Teams matches the number of
+Teams on its way and on-site.
+\item To have an overview of the events and information.
+\item To comunicate with the fireman coordinators and policeman coordinators.
+\item To coordinate the ressources in a most effective way.
 \end{enumerate}
 
 
 
 \subsubsection{Firemen}
-\subparagraph{Firemen Administrator}
-Most likely a chief or someone with high autorities in the Firemen Department.
-His job is to assign fellow colleagues as coordinators.
 
 \subparagraph{Firemen Coordinator}
-A Firemen Coordinator is a Team Leader who has been given special
-rights by the administrator. His job is:
+A Firemen Coordinator is a Team Leader who has special
+rights. He coordinates a team of 3 firemen and an ambulance.
+His job is:
 
 \begin{enumerate}
 \item To assemble his team as soon as possible when a dispatch request is
 received.
-\item To provide information on how long it takes to be on-site.
-\item To call for backup if needed when on-site.
-\item To eventually inform everyone (not just the Police) of any kind of
+\item To call for backup, if needed on-site.
+\item To inform the central coordinator of any kind of
 emergencies related to the incident.
-\item To organise blockades of the highway and deviations.
-\item To alert the Towing Service to clear the highway of the crashed cars.
+\item To organise deviations and blockades on the highway.
 \end{enumerate}
 
 \subsubsection{Police}
-\subparagraph{Police Administrator}
-Most likely a chief or someone with high autorities in the Police Department.
-His job is to assign fellow colleagues as coordinators.
 
 \subparagraph{Police Coordinator}
-A Police Coordinator is a Team Leader who has been given special
-rights by the administrator. His job is:
+A Police Coordinator is a Team Leader who has special
+rights. He coordinates a team of 3 policemen and a police car.
+His job is:
 
 \begin{enumerate}
 \item To assemble his team as soon as possible when a dispatch request is
 received.
-\item To provide information on how long it takes to be on-site.
-\item To call for backup if needed when on-site.
-\item To eventually inform everyone (not just the Police) of any kind
-of emergencies related to the incident.
+\item To eventually inform the central coordinator of any
+kind of emergencies related to the incident.
+\end{enumerate}
+
+\subparagraph{Tow-truck Driver}
+A Tow-truck Driver comes from a third party association. His Tow-truck can carry
+maximum 2 damaged cars.
+His job is:
+
+\begin{enumerate}
+  \item To come to the site of the crisis and to remove the damaged cars from
+  the site.
 \end{enumerate}
 
 
@@ -120,8 +116,8 @@ coordinates via its network to the system.
 
 
 \subsubsection{Activator}
-An Activator is a logical representation of the active part of our CMS. It represents an
-implicit stakeholder belonging to the system's environment that interacts with
+An Activator is a logical representation of the active part of HTS. It
+represents an implicit stakeholder belonging to the system's environment that interacts with
 our CMS autonomously without the need of external entity. It is usually time triggered
 functionalities. Its job is to communicate the current time and date to the
 system everytime an operation's processed.
@@ -130,12 +126,12 @@ system everytime an operation's processed.
 \subsection{Operating environment}
 %Brief overview of the infrastructure on which the software is deployed and
 % used.
-The department of Fire and Emergeny Services is a critical part of the State
-Services that needs quick actions and communication in order to minimize the
+The department of Fire and Emergeny Service is a critical part of the State
+Services that need quick actions and communication in order to minimize the
 casualties and inconveniences during emergencies such as car crash, school fire,
 etc. \\\\
 For the sake of a smooth execution of its tasks, it requires the
-cooperation of several other infrastucture such as the Hospital departments
+cooperation of several other infrastuctures such as the Hospital departments
 which are also greatly impacted during emergencies to take care of the injured
 and a good communication service between these institutions would also be
 required. \\\\
@@ -152,7 +148,7 @@ This user-manual is basically split into two parts. \\\\
 The first two chapters are meant to introduce the user-manual. Any user should
 have a look at these chapters to get a good overview of the manual. \\\\
 The second part going from chapter 3 to chapter 5 are the more technical
-part mostly composed of distinct procedures, operations or problems, meaning
+parts mostly composed of distinct procedures, operations or problems, meaning
 that by reading the description of the concerned section, the user should be
 able to identify whether it corresponds to their needs. As such, users would
 mostly be looking for a procedure in chapter 3 corresponding to their functions
@@ -161,7 +157,7 @@ explain in details their part. Otherwise if they encounter any error messages or
 problems of the system, they would need to check out chapter 5 for more
 information.
 Chapter 4 is mainly written for the purpose of understanding how the whole
-system works together through different software operation hidden from the
+system works together through different software operations hidden from the
 users.
 
 

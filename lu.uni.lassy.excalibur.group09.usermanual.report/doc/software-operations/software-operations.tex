@@ -9,13 +9,16 @@ being informed by a third party (citizen, organization).
 
 \begin{description}
 
-\item \textbf{Parameters:} Information of Witness, Crisis Information, Fireman
-Coordinator.
+\item \textbf{Parameters:} Information of Witness, Crisis Information.
 \item \textbf{Precondition:} The central coordinator is logged in and has
-received information from a witness.
+received information over the phone from a witness.
 \item \textbf{Post-condition:} A new crisis has been added to the system and the
-new crisis has automatically been assigned to a fireman coordinator, who has
-received an automatic notification from the system.
+new crisis has automatically been assigned to the nearest, available fireman
+coordinator. The system takes in consideration all the available fireman
+coordinators and then chooses the nearest of them. If no fireman coordinators
+are available, the system waits and chooses the next fireman coordinator that is
+available again. The fireman coordinator receives a message with the information
+corresponding to the crisis event.
 \item \textbf{Output messages:}\begin{enumerate}\item The selected fireman
 coordinator will be notified automatically once the crisis has been created.
 \item A new crisis with the corresponding information will be added to the
@@ -28,6 +31,7 @@ central coordinator's graphical user interface.
 related to the personal information of the witness such as name and actor type.
 \item Fill out the comment entry related to the crisis.
 \item Click the “Get Location” button.
+\item Confirm oraly the location with the witness over the phone.
 \item Click on the “Confirm Location” button, then click on the “Submit”
 button and add the entry to the database.
 \end{enumerate}
@@ -110,14 +114,14 @@ coordinator under the “Messages” window (see Fig.4.4).
 \begin{minipage}{1.0\textwidth}
 \begin{figure}[H]
 \caption{Main menu of Ipad app}
-\includegraphics[width=0.9\textwidth]{IpadAppHome1.eps}
+\includegraphics[width=0.9\textwidth]{Ipad_home.eps}
 \end{figure}
 \end{minipage}
 
 \begin{minipage}{1.0\textwidth}
 \begin{figure}[H]
 \caption{Chat menu of Ipad app}
-\includegraphics[width=0.9\textwidth]{Chat_Example.eps}
+\includegraphics[width=0.9\textwidth]{IpadChatExample.eps}
 \end{figure}
 \end{minipage}
 
